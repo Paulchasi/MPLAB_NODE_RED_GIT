@@ -82,6 +82,7 @@ void main(void)
         }
         valor=ADCC_GetSingleConversion(analogico0);
         printf(valor);
+        __delay_ms(100);
         // Add your application code
     }
 }

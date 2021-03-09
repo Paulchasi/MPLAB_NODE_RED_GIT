@@ -398,10 +398,10 @@ channel_FVR_buf1 63
 [v _main main `(v  1 e 1 0 ]
 {
 "69
-[v main@valor valor `i  1 a 2 20 ]
+[v main@valor valor `i  1 a 2 21 ]
 "68
-[v main@letra letra `uc  1 a 1 22 ]
-"87
+[v main@letra letra `uc  1 a 1 23 ]
+"88
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\printf.c
 [v _printf printf `(i  1 e 2 0 ]
@@ -415,41 +415,41 @@ channel_FVR_buf1 63
 "1368 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
 {
-[s S730 _IO_FILE 0 ]
-[v vfprintf@fp fp `*.1S730  1 a 1 wreg ]
+[s S736 _IO_FILE 0 ]
+[v vfprintf@fp fp `*.1S736  1 a 1 wreg ]
 "1371
 [v vfprintf@cfmt cfmt `*.25uc  1 a 2 11 ]
 "1368
-[v vfprintf@fp fp `*.1S730  1 a 1 wreg ]
+[v vfprintf@fp fp `*.1S736  1 a 1 wreg ]
 [v vfprintf@fmt fmt `*.25DCuc  1 p 2 5 ]
 [v vfprintf@ap ap `*.4*.4v  1 p 1 7 ]
 "1373
 "1368
-[v vfprintf@fp fp `*.1S730  1 a 1 10 ]
+[v vfprintf@fp fp `*.1S736  1 a 1 10 ]
 "1382
 } 0
 "670
 [v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
 {
-[s S730 _IO_FILE 0 ]
-[v vfpfcnvrt@fp fp `*.1S730  1 a 1 wreg ]
+[s S736 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.1S736  1 a 1 wreg ]
 "677
 [v vfpfcnvrt@vp vp `*.4v  1 a 1 12 ]
 "670
-[v vfpfcnvrt@fp fp `*.1S730  1 a 1 wreg ]
+[v vfpfcnvrt@fp fp `*.1S736  1 a 1 wreg ]
 [v vfpfcnvrt@fmt fmt `*.4*.25uc  1 p 1 10 ]
 [v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 11 ]
 "680
 "670
-[v vfpfcnvrt@fp fp `*.1S730  1 a 1 13 ]
+[v vfpfcnvrt@fp fp `*.1S736  1 a 1 13 ]
 "1365
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 2 ]
-[s S1059 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputc@fp fp `*.1S1059  1 p 1 4 ]
+[s S1065 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputc@fp fp `*.1S1065  1 p 1 4 ]
 "21
 } 0
 "146 C:\Users\UPS\MPLABXProjects\MPLAB_NODEred.X\mcc_generated_files/eusart.c

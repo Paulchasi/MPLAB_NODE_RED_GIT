@@ -21201,6 +21201,7 @@ void main(void)
         }
         valor=ADCC_GetSingleConversion(analogico0);
         printf(valor);
+        _delay((unsigned long)((100)*(32000000/4000.0)));
 
     }
 }

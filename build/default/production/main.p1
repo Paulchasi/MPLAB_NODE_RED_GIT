@@ -29,6 +29,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ADCC_GetSingleConversion `(us ~T0 @X0 0 ef1`E12261 ]
 "113 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c99\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+[v F12204 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
+[v __delay `JF12204 ~T0 @X0 0 e ]
+[p i __delay ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18875.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18875.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1752,14 +1756,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "84
 [; ;main.c: 84:         printf(valor);
 [e ( _printf -> _valor `*Cuc ]
-"86
-[; ;main.c: 86:     }
+"85
+[; ;main.c: 85:         _delay((unsigned long)((100)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"87
+[; ;main.c: 87:     }
 }
 [e :U 1630 ]
 [e $U 1631  ]
 [e :U 1632 ]
-"87
-[; ;main.c: 87: }
+"88
+[; ;main.c: 88: }
 [e :UE 1629 ]
 }
 [p f _printf 9437696 ]
