@@ -71,18 +71,40 @@ void main(void)
     {
          if (EUSART_is_rx_ready()){
             letra=getch();
-            if (letra=='A'){
-                led1_SetHigh();
+            if (letra=='1' || letra=='2' ){
+                led0_SetHigh();
+                led1_SetLow();
                 led2_SetLow();
+                led3_SetLow();
             }
-            if (letra=='B'){
+            if (letra=='3' || letra=='4'){
+                led1_SetHigh();
+                led0_SetLow();
+                led2_SetLow();
+                led3_SetLow();
+            }
+             if (letra=='4' || letra=='5'){
+                led2_SetHigh();
+                led0_SetLow();
+                led1_SetLow();
+                led3_SetLow();
+            }
+             if (letra=='6' || letra=='7'){
+                led3_SetHigh();
+                led0_SetLow();
+                led2_SetLow();
+                led1_SetLow();
+            }
+            if (letra=='8' || letra=='9'){
+                led3_SetHigh();
+                led0_SetLow();
                 led2_SetHigh();
                 led1_SetLow();
             }
         }
         valor=ADCC_GetSingleConversion(analogico0);
-        printf(valor);
-        __delay_ms(100);
+        printf("%d\n",valor);
+        
         // Add your application code
     }
 }

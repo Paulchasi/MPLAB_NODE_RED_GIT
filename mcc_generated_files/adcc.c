@@ -85,8 +85,8 @@ void ADCC_Initialize(void)
     ADPRE = 0x00;
     // ADDSEN disabled; ADGPOL digital_low; ADIPEN disabled; ADPPOL VSS; 
     ADCON1 = 0x00;
-    // ADCRS 0; ADMD Basic_mode; ADACLR disabled; ADPSIS ADRES; 
-    ADCON2 = 0x00;
+    // ADCRS 0; ADMD Burst_average_mode; ADACLR disabled; ADPSIS ADRES; 
+    ADCON2 = 0x03;
     // ADCALC First derivative of Single measurement; ADTMD disabled; ADSOI ADGO not cleared; 
     ADCON3 = 0x00;
     // ADAOV ACC or ADERR not Overflowed; 
@@ -95,12 +95,12 @@ void ADCC_Initialize(void)
     ADREF = 0x00;
     // ADACT disabled; 
     ADACT = 0x00;
-    // ADCCS FOSC/2; 
-    ADCLK = 0x00;
+    // ADCCS FOSC/128; 
+    ADCLK = 0x3F;
     // ADGO stop; ADFM right; ADON enabled; ADCONT enabled; ADCS FRC; 
     ADCON0 = 0xD4;
-    // ADACQ 0; 
-    ADACQ = 0x00;
+    // ADACQ 255; 
+    ADACQ = 0xFF;
     
 
 }

@@ -21204,7 +21204,7 @@ void ADCC_Initialize(void)
 
     ADCON1 = 0x00;
 
-    ADCON2 = 0x00;
+    ADCON2 = 0x03;
 
     ADCON3 = 0x00;
 
@@ -21214,11 +21214,11 @@ void ADCC_Initialize(void)
 
     ADACT = 0x00;
 
-    ADCLK = 0x00;
+    ADCLK = 0x3F;
 
     ADCON0 = 0xD4;
 
-    ADACQ = 0x00;
+    ADACQ = 0xFF;
 
 
 }

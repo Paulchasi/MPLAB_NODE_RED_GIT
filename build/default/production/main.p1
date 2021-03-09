@@ -20,8 +20,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "967
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18875.h: 967: extern volatile LATAbits_t LATAbits __attribute__((address(0x016)));
 [v _LATAbits `VS52 ~T0 @X0 0 e@22 ]
-"83 main.c
-[; ;main.c: 83:         valor=ADCC_GetSingleConversion(analogico0);
+"105 main.c
+[; ;main.c: 105:         valor=ADCC_GetSingleConversion(analogico0);
 [c E12261 0 60 61 62 63 .. ]
 [n E12261 . analogico0 channel_VSS channel_Temp channel_DAC1 channel_FVR_buf1  ]
 "249 ./mcc_generated_files/adcc.h
@@ -29,10 +29,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ADCC_GetSingleConversion `(us ~T0 @X0 0 ef1`E12261 ]
 "113 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c99\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-[v F12204 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
-[v __delay `JF12204 ~T0 @X0 0 e ]
-[p i __delay ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18875.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18875.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1703,70 +1699,204 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 73:             letra=getch();
 [e = _letra ( _getch ..  ]
 "74
-[; ;main.c: 74:             if (letra=='A'){
-[e $ ! == -> _letra `ui -> 65 `ui 1634  ]
+[; ;main.c: 74:             if (letra=='1' || letra=='2' ){
+[e $ ! || == -> _letra `ui -> 49 `ui == -> _letra `ui -> 50 `ui 1634  ]
 {
 "75
-[; ;main.c: 75:                 do { LATAbits.LATA5 = 1; } while(0);
+[; ;main.c: 75:                 do { LATAbits.LATA4 = 1; } while(0);
 [e :U 1637 ]
 {
-[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
+[e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
 }
 [e :U 1636 ]
 "76
-[; ;main.c: 76:                 do { LATAbits.LATA6 = 0; } while(0);
+[; ;main.c: 76:                 do { LATAbits.LATA5 = 0; } while(0);
 [e :U 1640 ]
-{
-[e = . . _LATAbits 0 6 -> -> 0 `i `uc ]
-}
-[e :U 1639 ]
-"77
-[; ;main.c: 77:             }
-}
-[e :U 1634 ]
-"78
-[; ;main.c: 78:             if (letra=='B'){
-[e $ ! == -> _letra `ui -> 66 `ui 1641  ]
-{
-"79
-[; ;main.c: 79:                 do { LATAbits.LATA6 = 1; } while(0);
-[e :U 1644 ]
-{
-[e = . . _LATAbits 0 6 -> -> 1 `i `uc ]
-}
-[e :U 1643 ]
-"80
-[; ;main.c: 80:                 do { LATAbits.LATA5 = 0; } while(0);
-[e :U 1647 ]
 {
 [e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 1646 ]
-"81
-[; ;main.c: 81:             }
+[e :U 1639 ]
+"77
+[; ;main.c: 77:                 do { LATAbits.LATA6 = 0; } while(0);
+[e :U 1643 ]
+{
+[e = . . _LATAbits 0 6 -> -> 0 `i `uc ]
 }
-[e :U 1641 ]
+[e :U 1642 ]
+"78
+[; ;main.c: 78:                 do { LATAbits.LATA7 = 0; } while(0);
+[e :U 1646 ]
+{
+[e = . . _LATAbits 0 7 -> -> 0 `i `uc ]
+}
+[e :U 1645 ]
+"79
+[; ;main.c: 79:             }
+}
+[e :U 1634 ]
+"80
+[; ;main.c: 80:             if (letra=='3' || letra=='4'){
+[e $ ! || == -> _letra `ui -> 51 `ui == -> _letra `ui -> 52 `ui 1647  ]
+{
+"81
+[; ;main.c: 81:                 do { LATAbits.LATA5 = 1; } while(0);
+[e :U 1650 ]
+{
+[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
+}
+[e :U 1649 ]
 "82
-[; ;main.c: 82:         }
+[; ;main.c: 82:                 do { LATAbits.LATA4 = 0; } while(0);
+[e :U 1653 ]
+{
+[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
+}
+[e :U 1652 ]
+"83
+[; ;main.c: 83:                 do { LATAbits.LATA6 = 0; } while(0);
+[e :U 1656 ]
+{
+[e = . . _LATAbits 0 6 -> -> 0 `i `uc ]
+}
+[e :U 1655 ]
+"84
+[; ;main.c: 84:                 do { LATAbits.LATA7 = 0; } while(0);
+[e :U 1659 ]
+{
+[e = . . _LATAbits 0 7 -> -> 0 `i `uc ]
+}
+[e :U 1658 ]
+"85
+[; ;main.c: 85:             }
+}
+[e :U 1647 ]
+"86
+[; ;main.c: 86:              if (letra=='4' || letra=='5'){
+[e $ ! || == -> _letra `ui -> 52 `ui == -> _letra `ui -> 53 `ui 1660  ]
+{
+"87
+[; ;main.c: 87:                 do { LATAbits.LATA6 = 1; } while(0);
+[e :U 1663 ]
+{
+[e = . . _LATAbits 0 6 -> -> 1 `i `uc ]
+}
+[e :U 1662 ]
+"88
+[; ;main.c: 88:                 do { LATAbits.LATA4 = 0; } while(0);
+[e :U 1666 ]
+{
+[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
+}
+[e :U 1665 ]
+"89
+[; ;main.c: 89:                 do { LATAbits.LATA5 = 0; } while(0);
+[e :U 1669 ]
+{
+[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+}
+[e :U 1668 ]
+"90
+[; ;main.c: 90:                 do { LATAbits.LATA7 = 0; } while(0);
+[e :U 1672 ]
+{
+[e = . . _LATAbits 0 7 -> -> 0 `i `uc ]
+}
+[e :U 1671 ]
+"91
+[; ;main.c: 91:             }
+}
+[e :U 1660 ]
+"92
+[; ;main.c: 92:              if (letra=='6' || letra=='7'){
+[e $ ! || == -> _letra `ui -> 54 `ui == -> _letra `ui -> 55 `ui 1673  ]
+{
+"93
+[; ;main.c: 93:                 do { LATAbits.LATA7 = 1; } while(0);
+[e :U 1676 ]
+{
+[e = . . _LATAbits 0 7 -> -> 1 `i `uc ]
+}
+[e :U 1675 ]
+"94
+[; ;main.c: 94:                 do { LATAbits.LATA4 = 0; } while(0);
+[e :U 1679 ]
+{
+[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
+}
+[e :U 1678 ]
+"95
+[; ;main.c: 95:                 do { LATAbits.LATA6 = 0; } while(0);
+[e :U 1682 ]
+{
+[e = . . _LATAbits 0 6 -> -> 0 `i `uc ]
+}
+[e :U 1681 ]
+"96
+[; ;main.c: 96:                 do { LATAbits.LATA5 = 0; } while(0);
+[e :U 1685 ]
+{
+[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+}
+[e :U 1684 ]
+"97
+[; ;main.c: 97:             }
+}
+[e :U 1673 ]
+"98
+[; ;main.c: 98:             if (letra=='8' || letra=='9'){
+[e $ ! || == -> _letra `ui -> 56 `ui == -> _letra `ui -> 57 `ui 1686  ]
+{
+"99
+[; ;main.c: 99:                 do { LATAbits.LATA7 = 1; } while(0);
+[e :U 1689 ]
+{
+[e = . . _LATAbits 0 7 -> -> 1 `i `uc ]
+}
+[e :U 1688 ]
+"100
+[; ;main.c: 100:                 do { LATAbits.LATA4 = 0; } while(0);
+[e :U 1692 ]
+{
+[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
+}
+[e :U 1691 ]
+"101
+[; ;main.c: 101:                 do { LATAbits.LATA6 = 1; } while(0);
+[e :U 1695 ]
+{
+[e = . . _LATAbits 0 6 -> -> 1 `i `uc ]
+}
+[e :U 1694 ]
+"102
+[; ;main.c: 102:                 do { LATAbits.LATA5 = 0; } while(0);
+[e :U 1698 ]
+{
+[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+}
+[e :U 1697 ]
+"103
+[; ;main.c: 103:             }
+}
+[e :U 1686 ]
+"104
+[; ;main.c: 104:         }
 }
 [e :U 1633 ]
-"83
-[; ;main.c: 83:         valor=ADCC_GetSingleConversion(analogico0);
+"105
+[; ;main.c: 105:         valor=ADCC_GetSingleConversion(analogico0);
 [e = _valor -> ( _ADCC_GetSingleConversion (1 . `E12261 0 `i ]
-"84
-[; ;main.c: 84:         printf(valor);
-[e ( _printf -> _valor `*Cuc ]
-"85
-[; ;main.c: 85:         _delay((unsigned long)((100)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"87
-[; ;main.c: 87:     }
+"106
+[; ;main.c: 106:         printf("%d\n",valor);
+[e ( _printf , (. :s 1C _valor ]
+"109
+[; ;main.c: 109:     }
 }
 [e :U 1630 ]
 [e $U 1631  ]
 [e :U 1632 ]
-"88
-[; ;main.c: 88: }
+"110
+[; ;main.c: 110: }
 [e :UE 1629 ]
 }
-[p f _printf 9437696 ]
+[p f _printf 8388736 ]
+[a 1C 37 100 10 0 ]

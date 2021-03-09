@@ -21190,18 +21190,40 @@ void main(void)
     {
          if (EUSART_is_rx_ready()){
             letra=getch();
-            if (letra=='A'){
-                do { LATAbits.LATA5 = 1; } while(0);
+            if (letra=='1' || letra=='2' ){
+                do { LATAbits.LATA4 = 1; } while(0);
+                do { LATAbits.LATA5 = 0; } while(0);
                 do { LATAbits.LATA6 = 0; } while(0);
+                do { LATAbits.LATA7 = 0; } while(0);
             }
-            if (letra=='B'){
+            if (letra=='3' || letra=='4'){
+                do { LATAbits.LATA5 = 1; } while(0);
+                do { LATAbits.LATA4 = 0; } while(0);
+                do { LATAbits.LATA6 = 0; } while(0);
+                do { LATAbits.LATA7 = 0; } while(0);
+            }
+             if (letra=='4' || letra=='5'){
+                do { LATAbits.LATA6 = 1; } while(0);
+                do { LATAbits.LATA4 = 0; } while(0);
+                do { LATAbits.LATA5 = 0; } while(0);
+                do { LATAbits.LATA7 = 0; } while(0);
+            }
+             if (letra=='6' || letra=='7'){
+                do { LATAbits.LATA7 = 1; } while(0);
+                do { LATAbits.LATA4 = 0; } while(0);
+                do { LATAbits.LATA6 = 0; } while(0);
+                do { LATAbits.LATA5 = 0; } while(0);
+            }
+            if (letra=='8' || letra=='9'){
+                do { LATAbits.LATA7 = 1; } while(0);
+                do { LATAbits.LATA4 = 0; } while(0);
                 do { LATAbits.LATA6 = 1; } while(0);
                 do { LATAbits.LATA5 = 0; } while(0);
             }
         }
         valor=ADCC_GetSingleConversion(analogico0);
-        printf(valor);
-        _delay((unsigned long)((100)*(32000000/4000.0)));
+        printf("%d\n",valor);
+
 
     }
 }
